@@ -1,0 +1,41 @@
+<div class="page-header">
+
+	
+
+	<a href="<?php echo $this->url(array('controller'=>'index','action'=>'index'));?>">
+		<img src="img/main_logo.png" alt="ekopal_logo" class="logo-small-contact"/>
+	</a>
+
+	<h1 class="page-title-contact" >Kontakt</h1>
+	
+</div>
+		<div id="contactinfo-holder-wrapper">	
+				<div id="contactinfo-holder">					
+					<div id="address-info">
+						
+						<p>
+							<h1>Przyjedź do nas</h1>
+							Przyjdź i zobacz jak wyglądają piece pracujące u nas 
+							oraz jak wygląda ich produkcja 
+						</p>
+							
+						<p>
+							<h4>Z chęcią odpowiemy na Twoje pytania</h4>
+							Nasza firma znajduje się w Żytnej, przy ulicy Rybnickiej 24. Dokładne położenie widoczne jest na mapie.
+							<br/><br/>
+							Aby upewnić się, że na miejscu zastaniesz osobę, która będzie mogła oprowadzić Cie po obiekcie, prosimy o uprzedni kontakt telefoniczny, dzwoniąc pod numer telefonu:<br/>
+							<h4>(+48) 515 266 977</h4>
+						</p>						
+					</div>	
+
+					<div id="map_canvas"></div>
+					
+				</div>
+			</div>
+</div>
+	
+<?php 
+	$this->headScript()->appendFile('http://maps.google.com/maps/api/js?sensor=false')
+					   ->appendFile('js/map.js')
+					   ->appendScript('$(function(){ initialize(); });');
+?>

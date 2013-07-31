@@ -1,0 +1,512 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+body
+{
+	color: #484848;
+	font-family: "Open Sans Light";
+}
+
+
+@font-face 
+{
+    font-family: "Open Sans Light";
+    src: url('../fonts/OpenSans-Light.ttf') format("truetype");
+}
+
+@font-face 
+{	
+    font-family: "Open Sans Bold";
+    src: url('../fonts/OpenSans-Bold.ttf') format("truetype");
+}
+
+.font-bold
+{
+	font-family: "Open Sans Bold";
+}
+
+.h1
+{
+
+	font-size: 5em;
+}
+
+.h2
+{
+	font-size: 3em;
+}
+
+.h3
+{
+	font-size: 2em;
+}
+
+hr 
+{
+	width: 100px;
+	margin-left: 10%;
+	float:left;
+}
+
+#top-menu
+{
+	font-size: 18px;
+	text-align: center;
+	padding-right:20%;
+	padding-bottom: 10px;
+}
+
+.topmenu-arrow
+{
+	height: 15px; 	
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.topmenu-arrow-up
+{
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); /* Internet Explorer */
+	-moz-transform:rotate(180deg); /* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari and Chrome */
+	-o-transform:rotate(180deg); /* Opera */
+}
+
+
+
+
+ul.list
+{
+	list-style: none;
+
+}
+
+ul.list li
+{
+	padding-left: 30px;
+	background: url('../img/bullet_grey.png') no-repeat 0 5px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+ul.list-faq
+{
+	list-style: none;
+
+}
+
+ul.list-faq li
+{
+	padding-left: 30px;
+	background: url('../img/bullet_grey.png') no-repeat 0 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+
+.container 
+{
+	width:80%; 
+	padding:50px; 
+	margin: auto;
+}
+
+#top-menu ul
+{
+list-style: none;
+	text-align: right;
+	padding: 20px;
+	float: right;
+}
+
+#top-menu ul li
+{
+	padding:3px;
+}
+
+
+
+#top-menu ul a
+{
+	text-decoration: none;
+	color: #484848;
+}
+
+#top-menu ul li a:HOVER
+{
+
+	color: #6b685d;
+}
+
+#top-menu-button
+{
+	text-align: center;
+	padding: 10px;
+	width:80%; 
+	clear: both;
+	margin: auto; 
+	margin-bottom: -50px;
+	background-color: #fff;
+	cursor: pointer;
+	/*border-top: 1px solid #6b685d; 	*/
+	height: 85px;
+}
+
+#body-wrapper
+{
+	clear: both;
+	width: 100%;
+	padding-bottom: 50px;
+	background: url('../img/bg-sand.png');
+}
+
+#body-wrapper-top
+{
+	text-align: center;
+	background: url('../img/bg-gradient-sand.png') repeat-x;
+}
+
+#content
+{
+	text-align: left;
+}
+
+
+.page-header
+{
+	text-align:center; 
+	margin:auto; 
+	width: 100%; 
+	display:block; 
+	overflow:hidden;
+}
+
+.page-title
+{
+	float:left; 
+	width: 70%; 
+	text-align:left; 
+	padding-top:2%;
+
+	padding-bottom:2%; 
+	padding-left: 10%;
+}
+
+
+
+
+
+.logo-small
+{
+	width: 10%; 
+	padding-right: 10%;
+	padding-bottom: 2%;
+	padding-top:2%;
+	display: block; 
+	float:left;
+}
+/*******************
+***		contact page 	 ***
+********************/
+
+
+.logo-small-contact
+{
+	width: 10%; 
+	padding-left: 5%;
+	padding-bottom: 2%;
+	padding-top:2%;
+	display: block; 
+	float:left;
+}
+
+
+.page-title-contact
+{
+	float:left; 
+	width: 70%; 
+	text-align:left; 
+	padding-top:2%;
+	padding-bottom:2%; 
+	padding-left: 6%;
+}
+
+
+/*******************
+***		footer 	 ***
+********************/
+
+#footer
+{
+	font-size: 14px;
+	background-color: #fff;
+	padding-bottom: 100px;
+}
+
+#footer-menu-ul
+{
+	text-align: center;
+	padding-right:20%;
+	padding-bottom: 10px;
+	padding-bottom: 30px;
+}
+
+#footer ul
+{
+	list-style: none;
+	text-align: right;
+	padding: 20px;
+
+	float: right;
+}
+
+#footer-menu-ul a
+{
+	color: #484848;
+	text-decoration: none;
+}
+
+
+/*******************
+***	index page ***
+********************/
+#index-page-wrapper
+{
+	
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+#index-page-left-collumn
+{
+	text-align: justify; 
+	font-style: italic;
+	float: left;
+	width: 50%;
+	padding: 5%;
+}
+#furnace-flah
+{
+   display: block; 
+   float: left; 
+   width: 35%; 
+   padding-right: 5%;
+}
+
+#index-page-text-rght
+{
+    text-align: justify; 
+    font-style: italic;
+    float: left;
+    width: 40%;
+    padding: 5%;
+    padding-top: 10%;
+}
+
+#youtube-video
+{
+	float: left;
+	overflow: hidden; 
+	position: relative; 
+}
+
+#youtube-video iframe
+{	
+	margin: 0 auto;	
+}
+
+.logo
+{
+	height: 150px; 
+	width: auto; 
+	display: block; 
+	margin: 0 auto;
+}
+
+
+p
+{
+	padding: 10px;
+}
+
+/***********************
+****		sklad drewna 	****
+***********************/
+
+.crop
+{
+	float:left;
+	overflow: hidden; /* this is important */
+	position: relative; /* this is important too */
+	
+	width: 150px;
+	height: 90px;
+}
+
+.crop img
+{
+	position:absolute;
+}
+
+/***********************
+****		mapa 	****
+***********************/
+
+
+#map_canvas {
+	float: left;
+    height: 500px;
+    margin: 0px;
+    padding-bottom: 50px;
+    width: 80%;
+}
+
+#address-info
+{
+	float: left;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 18%;
+}
+
+#contactinfo-holder
+{
+	overflow: hidden;
+	width: 100%;
+}
+
+#contactinfo-holder-wrapper
+{
+	text-align: left;
+	margin-top: 20px;
+	margin-bottom:  20px; 
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.titlePlaces
+{
+	font-size: 16px;
+}
+
+.addressPlaces
+{
+	font-size: 14px;
+}
+
+.map-thumb
+{
+	float: left;
+	height: 70px;
+	width: auto;
+}
+
+.titlePlaces
+{
+	margin-bottom: 3px;
+}
+
+/********************
+***	media queries ***
+*********************/
+@media screen and (max-width: 768px) {
+	#content
+	{
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#content
+	{
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#content
+	{
+	}
+}
+
+/************************
+***	media queries ***
+************************/
+
+#map_holder
+{
+    overflow: hidden;
+   width:80%;
+   margin: auto;
+}
+
+
+#placesWrapper{
+    float:left;
+    height: 550px;
+    width: 18%;
+    overflow-y: scroll;
+}
+
+#map_canvas
+{
+    float:left;
+    width: 80%;
+}
+
+.places {
+	position:relative;
+	font-size:11px;
+	width: 170px;
+	float:left;
+	cursor:pointer;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+
+#bodyDivider{
+	height:70px;
+}	
+	
+
+.places:hover{
+	color: grey;
+}
+
+#map_canvas .titlePlaces,#map_canvas .cityPlaces,#map_canvas .addressPlaces{
+	color: #484848;
+}
+
+#placesHolder .active {
+	color: grey;
+}
+
+.titlePlaces{
+	font-weight: bold;
+	font-size: 12px;
+	padding-bottom: 5px;	
+}
+
+.cityPlaces{
+	font-style: italic;
+	padding-bottom: 3px;
+}
+
+.thumbnail{	
+	width:180px;
+	height:130px;
+	float:right;
+	background: url("../img/map_thumb.jpg") no-repeat;
+}
+
+#mapBody{
+	outline: 1px solid red;
+	float: left;	
+
+}

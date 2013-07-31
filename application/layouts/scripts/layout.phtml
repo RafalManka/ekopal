@@ -1,0 +1,180 @@
+<html>
+	<head>
+		<!-- meta information-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>	
+		<!-- css -->	
+		<link href="css/css.css" rel="stylesheet">
+		<!-- script for toggling up and down topmenu-->
+		<script src="js/toggle_topmenu.js"></script>
+		<script src="js/analyticstracking.js"></script>
+		<?php 
+			echo $this->headScript(); 
+			echo $this->headLink();
+		?>
+	</head>
+	<body>
+		<div id="top-menu">			
+				<ul>
+					<li><b>Menu główne</b></li>
+					<li>
+						<a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'index', 'action'=>'index')); ?>" >
+							Strona Główna
+						</a>
+					</li>
+					
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'facebook', 'action'=>'index')); ?>" >	
+							Ekopal na Facebooku
+						</a>
+					</li>
+					<!--
+						<li>
+							<a href="<?php echo $this->url(array('controller' => 'clients', 'action'=>'index')); ?>" >	
+								Mapa naszych klientów
+							</a>
+						</li>	
+					-->
+					<li>
+						<a href="<?php echo $this->url(array('controller'=>'faq', 'action'=>'index')); ?>">
+							Często Zadawane Pytania
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('module'=>'default','controller'=>'contact-map', 'action'=>'index')); ?>">
+							Kontakt
+						</a>
+					</li>
+													
+				</ul>
+				<ul>
+					<li><b>O nszych piecach</b></li>
+                                        <li>
+						<a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'client-map', 'action'=>'index')); ?>" >
+							Gdzie można znaleść nasze piece
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'inflaming', 'action'=>'index')); ?>" >
+							Obsługa
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller'=>'features', 'action'=>'index')); ?>" >	
+							Specyfikacja techniczna
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'Principleofoperation', 'action'=>'index')); ?>" >	
+							Zasada działania
+						</a>
+					</li>		
+
+				</ul>
+				<!--
+					<ul>
+					<li><b>Drewno</b></li>
+					<li>
+						<a href="<?php 
+						//echo $this->url(array('module'=>'default','controller'=>'drewno', 'action'=>'index')); ?>">
+							Drewno dębowe
+						</a>
+					</li>					
+				</ul>
+				<ul>					
+					<li><b>Wspólpraca</b></li>
+					<li>
+						<a href="<?php 
+						//echo $this->url(array('module'=>'default','controller'=>'affiliate', 'action'=>'index')); ?>">
+							Zapraszamy do współpracy
+						</a>
+					</li>
+				</ul>
+				-->
+				
+					
+		</div>
+		<div id="top-menu-button">
+			<img src="img/arrow_down.jpg" alt="arrow" class="topmenu-arrow" />
+			<span style="font-size: 24px;">
+				<b>menu </b>
+			</span>
+			<span class="topmenu-text">
+				(kliknij, aby <span class="replace">rozwinąć</span>)
+			</span>
+			<img src="img/arrow_down.jpg" alt="arrow" class="topmenu-arrow" />
+		</div>
+
+		<div id="body-wrapper">
+			<div id="body-wrapper-top">
+				
+				<div id="content">
+					<?php echo $this->layout()->content; ?>
+				</div>
+
+
+			</div>
+		</div>
+				<div id="footer">
+					<div id="footer-menu-ul">
+						<ul>
+					<li><b>Menu główne</b></li>
+					<li>
+						<a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'index', 'action'=>'index')); ?>" >
+							Strona Główna
+						</a>
+					</li>
+					
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'facebook', 'action'=>'index')); ?>" >	
+							Ekopal na Facebooku
+						</a>
+					</li>
+					<!--
+						<li>
+							<a href="<?php echo $this->url(array('controller' => 'clients', 'action'=>'index')); ?>" >	
+								Mapa naszych klientów
+							</a>
+						</li>	
+					-->
+					<li>
+						<a href="<?php echo $this->url(array('controller'=>'faq', 'action'=>'index')); ?>">
+							Często Zadawane Pytania
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('module'=>'default','controller'=>'contact-map', 'action'=>'index')); ?>">
+							Kontakt
+						</a>
+					</li>
+													
+				</ul>
+				<ul>
+					<li><b>O nszych piecach</b></li>
+                                        <li>
+						<a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'client-map', 'action'=>'index')); ?>" >
+							Gdzie można znaleść nasze piece
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'inflaming', 'action'=>'index')); ?>" >
+							Obsługa
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller'=>'features', 'action'=>'index')); ?>" >	
+							Specyfikacja techniczna
+						</a>
+					</li>
+					<li>
+						<a href="<?php echo $this->url(array('controller' => 'Principleofoperation', 'action'=>'index')); ?>" >	
+							Zasada działania
+						</a>
+					</li>		
+
+				</ul>
+					</div>		
+				</div>		
+	</body>
+</html>

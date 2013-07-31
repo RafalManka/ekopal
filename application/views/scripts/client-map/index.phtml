@@ -1,0 +1,97 @@
+<!--
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+-->
+<script	src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=&sensor=false" type="text/javascript"></script>
+
+
+<?php echo $this->headLink()->appendStylesheet('js/jScrollPane-master/style/jquery.jscrollpane.css'); ?>
+<?php echo $this->headScript()->appendFile('js/jScrollPane-master/script/jquery.mousewheel.js'); ?>
+<?php echo $this->headScript()->appendFile('js/jScrollPane-master/script/jquery.jscrollpane.min.js'); ?>
+<?php echo $this->headScript()->appendFile('js/clientMap.js'); ?>
+<script type="text/javascript">
+    $(function()
+    {
+        $('#placesWrapper').jScrollPane();
+    });
+</script>
+
+<div id="bodyDivider"></div>
+<body onload="initialize()" onunload="GUnload()">
+	<div id="map_holder">
+		<div id="returnMap"></div>
+		<div id="placesWrapper">
+			<div id="placesHolder">
+                <?php foreach($this->allClientsCoordinates as $client): ?>
+                    <div lng="<?php echo $client->lat; ?>" lat="<?php echo $client->lng; ?>" class="places">
+                        <div class="titlePlaces"><?php echo $client->city_name; ?></div>
+                        <div class="cityPlaces">Województwo <?php echo $client->Voivodeship; ?></div>
+                        <!--<div class="addressPlaces"></div>
+                        <div class="addressPlaces"></div>
+                        <div class="addressPlaces"></div>-->
+                    </div>
+                <?php endforeach; ?>
+			</div>
+		</div>
+		<div id="map_canvas"></div>
+	</div>
+</body>
+
+<script>
+
+    function initialize()
+    {
+        if (GBrowserIsCompatible()) {
+            var map = new GMap2(document.getElementById("map_canvas"));
+
+            map.setCenter(new GLatLng(52.219361,21.097891), 6);
+
+            map.setUIToDefault();
+
+            var baseIcon = new GIcon(G_DEFAULT_ICON);
+            baseIcon.shadow = "http://www.google.com/mapfiles/shadow50.png";
+            baseIcon.iconSize = new GSize(20, 34);
+            baseIcon.shadowSize = new GSize(37, 34);
+            baseIcon.iconAnchor = new GPoint(9, 34);
+            baseIcon.infoWindowAnchor = new GPoint(9, 2);
+        }
+
+        function createMarker(point,html) {
+            var marker = new GMarker(point);
+            GEvent.addListener(marker, "click", function() {
+                marker.openInfoWindowHtml(html);
+                map.setCenter(point);
+                map.setZoom(12);
+            });
+            return marker;
+        }
+
+        <?php $counter=0; foreach($this->allClientsCoordinates as $client): ?>
+
+        var point = new GLatLng(<?php echo $client->lat; ?>,<?php echo $client->lng; ?>);
+        var marker = createMarker(point,'<div style="width:240px"><?php echo $client->description; ?><\/div>')
+        map.addOverlay(marker);
+
+
+
+        <?php $counter++; endforeach; ?>
+
+
+        $(".places").click(function(){
+
+            var lang = parseFloat($(this).attr('lng'));
+            var lat = parseFloat($(this).attr('lat'));
+
+            var point = new GLatLng(lang, lat);
+            map.setCenter(point);
+            map.setZoom(12);
+
+            shopName = $(this).find('.titlePlaces').html();
+            cityName = $(this).find('.cityPlaces').html();
+            addressName = $(this).find('.addressPlaces').html();
+            $("#placesHolder").find('.places').removeClass('active');
+            $(this).addClass('active');
+            $('html,body').animate({scrollTop: $('#map_canvas').offset().top},'slow');
+        })
+    }
+
+</script>
