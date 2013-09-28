@@ -120,6 +120,13 @@ list-style: none;
 	padding: 20px;
 	float: right;
 }
+#top-menu ul:last-child{
+    float: left;
+    font-weight: bold;
+}
+#top-menu ul:last-child li{
+    text-align: left;
+}
 
 #top-menu ul li
 {
@@ -470,10 +477,6 @@ p
     margin-bottom: 25px;
 }
 
-#bodyDivider{
-	height:70px;
-}	
-	
 
 .places:hover{
 	color: grey;

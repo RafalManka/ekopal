@@ -10,7 +10,7 @@ class ClientMapController Extends Zend_Controller_Action
     public function indexAction()
     {
         $citiesCoordinates = new Application_Model_DbTable_CitiesCoordinates();
-        $this->view->allClientsCoordinates = $citiesCoordinates->fetchAll(null, "city_name ASC");
+        $this->view->allClientsCoordinates = $citiesCoordinates->fetchAll("type=0", "city_name ASC");
     }
 }
 

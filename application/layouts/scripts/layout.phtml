@@ -2,14 +2,14 @@
 	<head>
 		<!-- meta information-->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<!-- jQuery -->
-		<script src="js/jquery.js"></script>	
-		<!-- css -->	
-		<link href="css/css.css" rel="stylesheet">
+		<!-- css -->
+        <?php echo $this->headLink()->appendStylesheet($this->baseUrl().'/css/css.css'); ?>
 		<!-- script for toggling up and down topmenu-->
-		<script src="js/toggle_topmenu.js"></script>
-		<script src="js/analyticstracking.js"></script>
-		<?php 
+        <?php $this->headScript()->appendFile($this->baseUrl().'/js/jquery.js');?>
+        <?php $this->headScript()->appendFile($this->baseUrl().'/js/analyticstracking.js');?>
+        <?php $this->headScript()->appendFile($this->baseUrl().'/js/toggle_topmenu.js');?>
+
+		<?php
 			echo $this->headScript(); 
 			echo $this->headLink();
 		?>
@@ -31,10 +31,10 @@
 					</li>
 					<!--
 						<li>
-							<a href="<?php echo $this->url(array('controller' => 'clients', 'action'=>'index')); ?>" >	
+							<a href="<?php echo $this->url(array('controller' => 'clients', 'action'=>'index')); ?>" >
 								Mapa naszych klientów
 							</a>
-						</li>	
+						</li>
 					-->
 					<li>
 						<a href="<?php echo $this->url(array('controller'=>'faq', 'action'=>'index')); ?>">
@@ -46,6 +46,7 @@
 							Kontakt
 						</a>
 					</li>
+
 													
 				</ul>
 				<ul>
@@ -69,41 +70,27 @@
 						<a href="<?php echo $this->url(array('controller' => 'Principleofoperation', 'action'=>'index')); ?>" >	
 							Zasada działania
 						</a>
-					</li>		
-
-				</ul>
-				<!--
-					<ul>
-					<li><b>Drewno</b></li>
-					<li>
-						<a href="<?php 
-						//echo $this->url(array('module'=>'default','controller'=>'drewno', 'action'=>'index')); ?>">
-							Drewno dębowe
-						</a>
-					</li>					
-				</ul>
-				<ul>					
-					<li><b>Wspólpraca</b></li>
-					<li>
-						<a href="<?php 
-						//echo $this->url(array('module'=>'default','controller'=>'affiliate', 'action'=>'index')); ?>">
-							Zapraszamy do współpracy
-						</a>
 					</li>
 				</ul>
-				-->
+            <ul class="left-col">
+                <li>
+                    <a href="<?php echo $this->url(array('module'=>'default','controller'=>'index', 'action'=>'fuel-suppliers-map')); ?>">
+                        Zobacz, mapę<br> zaufanych dostawców opału
+                    </a>
+                </li>
+            </ul>
 				
 					
 		</div>
 		<div id="top-menu-button">
-			<img src="img/arrow_down.jpg" alt="arrow" class="topmenu-arrow" />
+			<img src="<?php echo $this->baseUrl(); ?>/img/arrow_down.jpg" alt="arrow" class="topmenu-arrow" />
 			<span style="font-size: 24px;">
 				<b>menu </b>
 			</span>
 			<span class="topmenu-text">
 				(kliknij, aby <span class="replace">rozwinąć</span>)
 			</span>
-			<img src="img/arrow_down.jpg" alt="arrow" class="topmenu-arrow" />
+			<img src="<?php echo $this->baseUrl(); ?>/img/arrow_down.jpg" alt="arrow" class="topmenu-arrow" />
 		</div>
 
 		<div id="body-wrapper">
@@ -157,6 +144,11 @@
 							Gdzie można znaleść nasze piece
 						</a>
 					</li>
+                    <li>
+                        <a href="<?php echo $this->url(array('module'=>'default','controller'=>'index', 'action'=>'fuel-suppliers-map')); ?>">
+                            Zaufani dostawcy opału
+                        </a>
+                    </li>
 					<li>
 						<a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'inflaming', 'action'=>'index')); ?>" >
 							Obsługa

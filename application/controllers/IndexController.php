@@ -13,6 +13,11 @@ class IndexController extends Zend_Controller_Action
         // action body
     }
 
+    public function fuelSuppliersMapAction(){
+        $citiesCoordinates = new Application_Model_DbTable_CitiesCoordinates();
+        $this->view->allClientsCoordinates = $citiesCoordinates->fetchAll("type=1", "city_name ASC");
+    }
+
 
 }
 
