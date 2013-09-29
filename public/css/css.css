@@ -260,6 +260,13 @@ list-style: none;
 	padding-bottom: 30px;
 }
 
+#footer-menu-ul ul:last-child{
+    float: left;
+    font-weight: bold;
+    font-size: 18;
+}
+
+
 #footer ul
 {
 	list-style: none;
